@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import './home.css'
 
 function Home() {
