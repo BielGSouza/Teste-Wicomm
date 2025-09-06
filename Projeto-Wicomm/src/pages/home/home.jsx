@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import './home.css'
 
 function Home() {
@@ -112,6 +112,7 @@ function Home() {
 
     return (
         <div>
+        <SpeedInsights />
             <header>
                 <div id="carouselHeader" ref={containerRef}>
                     <img id='img02' src="./imgs_carousel/baner_gato2.png" alt="" className='w-[90vw]' style={{ marginLeft: '77px' }} />
