@@ -1,0 +1,142 @@
+@charset "UTF-8";
+@import "tailwindcss";
+@font-face {
+    font-family: SoraExtraLight;
+    src: url(../../../public/fonts/Sora/static/Sora-ExtraLight.ttf);
+}
+@font-face {
+    font-family: SoraLight;
+    font-weight: 300;
+    src: url(./public/fonts/Sora/static/Sora-Light.ttf) format("truetype");
+}
+@font-face {
+    font-family: SoraRegular;
+    font-weight: 400;
+    src: url(./public/fonts/Sora/static/Sora-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: SoraBold;
+    font-weight: 700;
+    src: url(./public/fonts/Sora/static/Sora-Bold.ttf) format("truetype");
+}
+@font-face {
+    font-family: OswaldExtraLight;
+    font-weight: 250;
+    src: url(../../../public/fonts/Oswald/static/Oswald-ExtraLight.ttf) format("truetype");
+}
+
+:root{
+
+    --white: #FFFFFF;
+    --light-grey: #EFEFEF;
+    --light-grey-2: #D9D9D9;
+    --black: #000000;
+    --dark-grey-grey: #1E1E1E;
+    --dark-grey: #373737;
+    --terracotta-red: #DE5A53;
+    --rust-red: #BB3735;
+    --airy-blue: #7EB4C8;
+    --verdigris: #4DA1B1;
+    --moccasin: #FFE4B3;
+
+}
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: SoraRegular;
+}
+
+body{
+    background-color: var(--light-grey);
+    overflow-x: hidden;
+}
+
+p{font-family: SoraLight;}
+h2{font-family: SoraBold;}
+
+
+
+/* Estilos do Header */
+
+#carouselHeader {
+    width: 100vw;
+    height: 90vh; /* altura igual às imagens */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE e Edge */
+    scrollbar-width: none;     /* Firefox */
+
+    margin: 10px 0px 0px 0px;
+}
+
+/* Imagens do carrossel */
+#carouselHeader img {
+    flex: 0 0 auto;
+    margin: 10px;
+    height: 90vh;
+}
+
+/* Menu dos slides */
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: rgba(54, 54, 54, 0.378);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+input[type="radio"]:checked {
+    background-color: var(--black);
+    scale: 1.2;
+}
+
+nav{
+    position: absolute;
+    top: 40px;
+
+    display: flex;
+    align-items: center;
+
+    width: 97vw;
+    height: 40px;
+    color: white;
+    font-size: 14px;
+}
+
+#searchInput{
+    border: none;
+    padding: 5px;
+}
+#searchInput:focus{
+    outline: none;
+    border-bottom: 1px solid white;
+}
+
+#divRollLetter{
+    top: 15px;
+    left: 10px;
+    font-family: OswaldExtraLight;
+    min-width: 200%;
+    font-size: 14px;
+    color: white;
+    animation: LetterScroll 12s linear infinite;
+}
+
+@keyframes LetterScroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
