@@ -170,33 +170,39 @@ function Home() {
                 </div>
 
                 <section className='flex justify-center' style={{ margin: '' }}>
-                    <nav className='w-[1240px]'>
+                    <nav className='w-[1240px] fixed'>
                         <div id='divLogoNav' className='bg-[#EFEFEF] h-[100%] w-[126px] flex items-center justify-center'>
                             <img src="./imgs_header/logo.svg" alt="" className='absolute top-[6px]' />
                         </div>
+
                         <div className='bg-[#1E1E1E] flex items-center justify-center gap-4 h-[100%] w-[135px] border-1' style={{ padding: '5px 30px' }}>
                             <img src="./imgs_header/menu_01.svg" alt="" />
                             <p className='font-bold'><strong>produtos</strong></p>
                         </div>
+
                         <div className='bg-[#1E1E1E] flex items-center justify-center gap-4 h-[100%] w-[135px] border-1' style={{ padding: '5px 30px' }}>
                             <img src="./imgs_header/menu_02.svg" alt="" />
                             <p className='font-[10]'>coleções</p>
                         </div>
+
                         <div id='divMenuLoacal' className='bg-[#1E1E1E] flex items-center justify-end gap-4 border-1 w-[532px] h-[100%]' style={{ padding: '5px 30px' }}>
                             <p className='cursor-pointer hover:scale-[1.2] hover:text-[#FFE4B3] duration-75'><a href="#">blog</a></p>
                             <p className='cursor-pointer hover:scale-[1.2] hover:text-[#FFE4B3] duration-75'><a href="#">lookbook</a></p>
                             <p className='cursor-pointer hover:scale-[1.2] hover:text-[#FFE4B3] duration-75'><a href="#">sobre a Gat</a></p>
                             <p className='cursor-pointer hover:scale-[1.2] hover:text-[#FFE4B3] duration-75'><a href="#">wishlist</a></p>
                         </div>
+
                         <div className='bg-[#1E1E1E] flex items-center gap-4 h-[100%] w-[213px] border-1 text-[12px]' style={{ padding: '5px 10px' }}>
                             <label htmlFor="search">
                                 <img src="./imgs_header/search.svg" alt="" className='' />
                             </label>
                             <input type="text" name="search" id="searchInput" placeholder='digite aqui o que procura' className='w-[200px] focus:border-none' />
                         </div>
+
                         <div className='bg-[#1E1E1E] h-[100%] w-[40px] flex items-center justify-center border-1'>
                             <img src="./imgs_header/user.svg" alt="" />
                         </div>
+
                         <div className='bg-black flex items-center justify-center border-1 gap-4 h-[100%] w-[59px]'>
                             <img src="./imgs_header/cart.svg" alt="" />
                             <img src="./imgs_header/notification.svg" alt="" className='absolute right-[11px] top-[8px]' />
@@ -536,11 +542,11 @@ function Home() {
                                     <p className=' text-[14px] leading-[25px] w-[274px]' style={{ fontFamily: 'SoraBold' }}>CADASTRE-SE E GANHE 10% OFF NA SUA PRIMEIRA COMPRA</p>
                                     <p className='text-[14px] leading-[25px] w-[295px]'>Seja a primeira a receber lançamentos, novidades e promoções.</p>
                                 </div>
-                                <div className='flex flex-col gap-y-10'>
-                                    <input type="text" name="" id="" placeholder='NOME DO SEU PET' className='border-b-1 w-[400px]' />
-                                    <input type="text" name="" id="" placeholder='SEU EMAIL' className='border-b-1 w-[400px]' />
+                                <form className='flex flex-col gap-y-10'>
+                                    <input type="text" name="" id="" placeholder='NOME DO SEU PET' className='border-b-1 w-[400px] focus:outline-none' />
+                                    <input type="text" name="" id="" placeholder='SEU EMAIL' className='border-b-1 w-[400px] focus:outline-none' />
                                     <button className='w-[188px] h-[39px]'>CADASTRAR</button>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </aside>
