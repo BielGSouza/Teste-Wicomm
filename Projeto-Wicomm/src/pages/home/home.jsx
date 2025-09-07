@@ -408,9 +408,9 @@ function Home() {
                     <div className='flex items-center justify-center' style={{ marginTop: '34px' }}>
                         <div className='w-[1241px] h-[59px] text-black flex justify-between'>
                             <button className='w-[255.11px] h-[59px] flex items-center justify-center border-1 border-black rounded-4xl' style={{ padding: '13.5px 24.13' }}><img src="./imgs_category_navigation/produto_1.png" alt="" className='w-[38] h-[42]' />CLÁSSICO</button>
-                            <button className='w-[254.25px] h-[59px] flex items-center justify-center border-1 border-black rounded-4xl' style={{ padding: '13.5px 24.13' }}><img src="public/imgs_category_navigation/produto_2.png" alt="" className='w-[46px] h-[37px]' />MINIMALISMO</button>
-                            <button className='w-[254.25px] h-[59px] flex items-center justify-center border-1 border-black rounded-4xl' style={{ padding: '13.5px 24.13' }}><img src="public/imgs_category_navigation/produto_3.png" alt="" className='w-[42px] h-[32px]' />MAXIMALISMO</button>
-                            <button className='w-[254.25px] h-[59px] flex items-center justify-center border-1 border-black rounded-4xl' style={{ padding: '13.5px 24.13' }}><img src="public/imgs_category_navigation/produto_4.png" alt="" className='w-[46px] h-[32px]' />BOHO</button>
+                            <button className='w-[254.25px] h-[59px] flex items-center justify-center border-1 border-black rounded-4xl' style={{ padding: '13.5px 24.13' }}><img src="./imgs_category_navigation/produto_2.png" alt="" className='w-[46px] h-[37px]' />MINIMALISMO</button>
+                            <button className='w-[254.25px] h-[59px] flex items-center justify-center border-1 border-black rounded-4xl' style={{ padding: '13.5px 24.13' }}><img src="./imgs_category_navigation/produto_3.png" alt="" className='w-[42px] h-[32px]' />MAXIMALISMO</button>
+                            <button className='w-[254.25px] h-[59px] flex items-center justify-center border-1 border-black rounded-4xl' style={{ padding: '13.5px 24.13' }}><img src="./imgs_category_navigation/produto_4.png" alt="" className='w-[46px] h-[32px]' />BOHO</button>
                             <button className='w-[157.37px] h-[59px] flex items-center justify-center border-1 border-black rounded-4xl' style={{ padding: '13.5px 24.13px' }}>VER TUDO</button>
                         </div>
                     </div>
