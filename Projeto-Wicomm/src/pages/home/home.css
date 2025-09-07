@@ -3,31 +3,31 @@
 
 @font-face {
     font-family: SoraExtraLight;
-    src: url(./fonts/Sora/static/Sora-ExtraLight.ttf);
+    src: url(/fonts/Sora/static/Sora-ExtraLight.ttf);
 }
 
 @font-face {
     font-family: SoraLight;
     font-weight: 300;
-    src: url(./fonts/Sora/static/Sora-Light.ttf) format("truetype");
+    src: url(/fonts/Sora/static/Sora-Light.ttf) format("truetype");
 }
 
 @font-face {
     font-family: SoraRegular;
     font-weight: 400;
-    src: url(./fonts/Sora/static/Sora-Regular.ttf) format("truetype");
+    src: url(/fonts/Sora/static/Sora-Regular.ttf) format("truetype");
 }
 
 @font-face {
     font-family: SoraBold;
     font-weight: 700;
-    src: url(./fonts/Sora/static/Sora-Bold.ttf) format("truetype");
+    src: url(/fonts/Sora/static/Sora-Bold.ttf) format("truetype");
 }
 
 @font-face {
     font-family: OswaldExtraLight;
     font-weight: 250;
-    src: url(./fonts/Oswald/static/Oswald-ExtraLight.ttf) format("truetype");
+    src: url(/fonts/Oswald/static/Oswald-ExtraLight.ttf) format("truetype");
 }
 
 :root {
