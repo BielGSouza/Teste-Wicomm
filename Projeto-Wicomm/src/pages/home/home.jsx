@@ -110,6 +110,48 @@ function Home() {
         setActiveSlide(0);
     }
 
+    //Funçao para curtir a foto
+    function CurtirFoto(numero) {
+        const like = document.getElementById('imgLike')
+        const like1 = document.getElementById('imgLike1')
+        const like2 = document.getElementById('imgLike2')
+        const like3 = document.getElementById('imgLike3')
+        const like4 = document.getElementById('imgLike4')
+        const IdLike = numero
+
+        if (numero === 0) {
+            if (like.src === "http://localhost:5173/imgs_gallery/heart.svg") {
+                like.src = "http://localhost:5173/imgs_gallery/heart_red.svg"
+            } else {
+                like.src = "http://localhost:5173/imgs_gallery/heart.svg"
+            }
+        } else if (numero === 1) {
+            if (like1.src === "http://localhost:5173/imgs_gallery/heart.svg") {
+                like1.src = "http://localhost:5173/imgs_gallery/heart_red.svg"
+            } else {
+                like1.src = "http://localhost:5173/imgs_gallery/heart.svg"
+            }
+        } else if (numero === 2) {
+            if (like2.src === "http://localhost:5173/imgs_gallery/heart.svg") {
+                like2.src = "http://localhost:5173/imgs_gallery/heart_red.svg"
+            } else {
+                like2.src = "http://localhost:5173/imgs_gallery/heart.svg"
+            }
+        } else if (numero === 3) {
+            if (like3.src === "http://localhost:5173/imgs_gallery/heart.svg") {
+                like3.src = "http://localhost:5173/imgs_gallery/heart_red.svg"
+            } else {
+                like3.src = "http://localhost:5173/imgs_gallery/heart.svg"
+            }
+        } else if (numero === 4) {
+            if (like4.src === "http://localhost:5173/imgs_gallery/heart.svg") {
+                like4.src = "http://localhost:5173/imgs_gallery/heart_red.svg"
+            } else {
+                like4.src = "http://localhost:5173/imgs_gallery/heart.svg"
+            }
+        }
+    }
+
     return (
         <div>
             <SpeedInsights />
@@ -146,7 +188,7 @@ function Home() {
                             <p className='cursor-pointer hover:scale-[1.2] hover:text-[#FFE4B3] duration-75'><a href="#">sobre a Gat</a></p>
                             <p className='cursor-pointer hover:scale-[1.2] hover:text-[#FFE4B3] duration-75'><a href="#">wishlist</a></p>
                         </div>
-                        <div className='bg-[#1E1E1E] flex items-center gap-4 h-[100%] w-[213px] border-1' style={{ padding: '5px 10px' }}>
+                        <div className='bg-[#1E1E1E] flex items-center gap-4 h-[100%] w-[213px] border-1 text-[12px]' style={{ padding: '5px 10px' }}>
                             <label htmlFor="search">
                                 <img src="./imgs_header/search.svg" alt="" className='' />
                             </label>
@@ -234,7 +276,7 @@ function Home() {
                         >
                             <h2
                                 className="bg-[#4DA1B1] w-[483px] h-[210px] text-[50px] flex justify-end items-center"
-                                style={{ paddingRight: "53px", lineHeight: "50px" }}
+                                style={{ paddingRight: "53px", lineHeight: "50px", fontFamily: "SoraBold" }}
                             >
                                 MINIMA <br /> LISMO
                             </h2>
@@ -335,7 +377,7 @@ function Home() {
                                 <div>
                                     <p style={{ fontFamily: 'SoraBold' }} className='text-[16px] text-[#373737] uppercase'>Toca Túnel <br /> Módulos</p>
                                     <span className='flex gap-3 items-center'>
-                                        <p style={{ fontFamily: 'SoraLight' }} className='text-[12px] text-[#373737]'>R$00,00</p>
+                                        <p style={{ fontFamily: 'SoraLight', textDecoration: 'line-through' }} className='text-[12px] text-[#373737]'>R$00,00</p>
                                         <p style={{ fontFamily: 'SoraBold' }} className='text-[12px] text-[#373737]'>R$0000,00</p>
                                     </span>
                                 </div>
@@ -360,7 +402,7 @@ function Home() {
                                 <div>
                                     <p style={{ fontFamily: 'SoraBold' }} className='text-[16px] text-[#373737] uppercase'>Toca Túnel <br /> Módulos</p>
                                     <span className='flex gap-3 items-center'>
-                                        <p style={{ fontFamily: 'SoraLight' }} className='text-[12px] text-[#373737]'>R$00,00</p>
+                                        <p style={{ fontFamily: 'SoraLight', textDecoration: 'line-through' }} className='text-[12px] text-[#373737]'>R$00,00</p>
                                         <p style={{ fontFamily: 'SoraBold' }} className='text-[12px] text-[#373737]'>R$0000,00</p>
                                     </span>
                                 </div>
@@ -385,7 +427,7 @@ function Home() {
                                 <div>
                                     <p style={{ fontFamily: 'SoraBold' }} className='text-[16px] text-[#373737] uppercase'>Toca Túnel <br /> Módulos</p>
                                     <span className='flex gap-3 items-center'>
-                                        <p style={{ fontFamily: 'SoraLight' }} className='text-[12px] text-[#373737]'>R$00,00</p>
+                                        <p style={{ fontFamily: 'SoraLight', textDecoration: 'line-through' }} className='text-[12px] text-[#373737]'>R$00,00</p>
                                         <p style={{ fontFamily: 'SoraBold' }} className='text-[12px] text-[#373737]'>R$0000,00</p>
                                     </span>
                                 </div>
@@ -407,10 +449,10 @@ function Home() {
 
                     <div className='flex items-center justify-center' style={{ marginTop: '34px' }}>
                         <div className='w-[1241px] h-[59px] text-black flex justify-between'>
-                            <button className='w-[255.11px] h-[59px] flex items-center justify-center border-1 border-black rounded-4xl' style={{ padding: '13.5px 24.13' }}><img src="./imgs_category_navigation/produto_1.png" alt="" className='w-[38] h-[42]' />CLÁSSICO</button>
-                            <button className='w-[254.25px] h-[59px] flex items-center justify-center border-1 border-black rounded-4xl' style={{ padding: '13.5px 24.13' }}><img src="./imgs_category_navigation/produto_2.png" alt="" className='w-[46px] h-[37px]' />MINIMALISMO</button>
-                            <button className='w-[254.25px] h-[59px] flex items-center justify-center border-1 border-black rounded-4xl' style={{ padding: '13.5px 24.13' }}><img src="./imgs_category_navigation/produto_3.png" alt="" className='w-[42px] h-[32px]' />MAXIMALISMO</button>
-                            <button className='w-[254.25px] h-[59px] flex items-center justify-center border-1 border-black rounded-4xl' style={{ padding: '13.5px 24.13' }}><img src="./imgs_category_navigation/produto_4.png" alt="" className='w-[46px] h-[32px]' />BOHO</button>
+                            <button className='w-[255.11px] h-[59px] flex gap-4 items-center justify-center border-1 border-black rounded-4xl' style={{ padding: '13.5px 24.13' }}><img src="./imgs_category_navigation/produto_1.png" alt="" className='w-[38] h-[42]' />CLÁSSICO</button>
+                            <button className='w-[254.25px] h-[59px] flex gap-4 items-center justify-center border-1 border-black rounded-4xl' style={{ padding: '13.5px 24.13' }}><img src="./imgs_category_navigation/produto_2.png" alt="" className='w-[46px] h-[37px]' />MINIMALISMO</button>
+                            <button className='w-[254.25px] h-[59px] flex gap-4 items-center justify-center border-1 border-black rounded-4xl' style={{ padding: '13.5px 24.13' }}><img src="./imgs_category_navigation/produto_3.png" alt="" className='w-[42px] h-[32px]' />MAXIMALISMO</button>
+                            <button className='w-[254.25px] h-[59px] flex gap-4 items-center justify-center border-1 border-black rounded-4xl' style={{ padding: '13.5px 24.13' }}><img src="./imgs_category_navigation/produto_4.png" alt="" className='w-[46px] h-[32px]' />BOHO</button>
                             <button className='w-[157.37px] h-[59px] flex items-center justify-center border-1 border-black rounded-4xl' style={{ padding: '13.5px 24.13px' }}>VER TUDO</button>
                         </div>
                     </div>
@@ -418,23 +460,163 @@ function Home() {
 
                 <section style={{ marginTop: '72px' }}>
                     <div className='w-[282px] h-[322px] bg-white border-1 border-black absolute right-[140.4px] text-black flex flex-col items-center justify-center gap-4  ' style={{ marginTop: '19px' }}>
-                        <h2 className='text-[30px] w-[232px]'>Lorem Ipsum <br /> Dolor Sit</h2>
+                        <h2 className='text-[30px] w-[232px]' style={{ fontFamily: 'SoraBold' }}>Lorem Ipsum <br /> Dolor Sit</h2>
                         <div className='flex items-center flex-col gap-2 w-[232px]'>
-                            <p className='text-[14px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                            <p className='text-[14px]'>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                            <p className='text-[14px]' style={{ fontFamily: 'SoraLight' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <p className='text-[14px]' style={{ fontFamily: 'SoraLight' }}>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
                         </div>
                         <div className='w-[232px]'><button type="button" className='w-[182px] h-[45px] flex items-center justify-center' style={{ padding: '16.5px 31px' }}>VER SELEÇÃO</button></div>
                     </div>
                     <img src="./imgs_cat_everything/bg_image.png" alt="" />
                 </section>
 
-                <section style={{ marginTop: '42px'}} className='border-1 border-amber-500'>
-                    <img src="./imgs_cat_spotlight/elipse_red.png" alt="" width={272} className='absolute left-[294px]'/>
+                <section style={{ marginTop: '42px' }} className='grid grid-cols-2'>
+                    <div>
+                        <img src="./imgs_cat_spotlight/elipse_red.png" alt="" width={272} className='absolute left-[414.4px]' style={{ marginTop: '15px' }} />
+                        <h2 className='absolute left-[249.4px] text-[70px] w-[396px] h-[257px] text-[#373737] z-1' style={{ fontFamily: 'SoraRegular', marginTop: '83px', lineHeight: '88px' }}>Decorar <br /> Arranhar & <br /> Relaxar</h2>
+                    </div>
+                    <div className='w-[505px] gap-4' style={{ padding: '40px 0px 47px 0px' }}>
+                        <img src="./imgs_cat_spotlight/video.png" alt="" width={505} />
+                        <p className='text-[#373737] text-[14px]' style={{ padding: '55.94px 0px 46px 0px', lineHeight: '25px' }}>Hammer can low idea of. Lunch able design items needle here stop drive. / or devil pants game close. Prioritize out key view / vendor we've. 4-blocker gave shift ideal based post.</p>
+                        <button className='w-[295px] h-[45px] text-black'>MAIS SOBRE A GAT</button>
+                    </div>
+                </section>
+
+                <section className='h-[725px] bg-[#FFFFFF] text-black' style={{ paddingTop: '69px' }}>
+                    <p className='w-[499px] h-[40px] text-[20px]' style={{ marginLeft: '234px', lineHeight: '25px' }}>Faça parte da comunidade de gatunos que amam design e papelão compartilhando a hashtag:</p>
+                    <h2 className='w-[913px] h-[55px] flex items-center justify-center relative text-[#7EB4C8] text-[75px] z-[99]' style={{ fontFmaily: 'SoraRegular', marginLeft: '228px', marginTop: '14px' }}>#AdoradoresDePapelão</h2>
+                    <div className='overflow-hidden' style={{ marginTop: '-18px' }}>
+                        <div id='SliderInfinito' className='flex items-center gap-[18px] w-[100%]' style={{ padding: '0px 18px', marginTop: '-17px' }}>
+                            <span className=' w-[270px] h-[481px] flex-shrink-0'>
+                                <img src="./imgs_gallery/gato1.png" alt="" />
+                                <div className='w-[36px] h-[38px] flex justify-center items-center flex-col relative left-[220px] top-[-50px]'>
+                                    <img id='imgLike' src="./imgs_gallery/heart.svg" alt="" width={24} onClick={() => CurtirFoto(0)} />
+                                    <p className='text-[13px] text-white'>10mil</p>
+                                </div>
+                            </span>
+                            <span className='w-[270px] h-[481px] flex-shrink-0'>
+                                <img src="./imgs_gallery/gato2.png" alt="" />
+                                <div className='w-[36px] h-[38px] flex justify-center items-center flex-col relative left-[220px] top-[-50px]'>
+                                    <img id='imgLike1' src="./imgs_gallery/heart.svg" alt="" width={24} onClick={() => CurtirFoto(1)} />
+                                    <p className='text-[13px] text-white'>10mil</p>
+                                </div>
+                            </span>
+                            <span className='w-[270px] h-[481px] flex-shrink-0'>
+                                <img src="./imgs_gallery/gato3.png" alt="" />
+                                <div className='w-[36px] h-[38px] flex justify-center items-center flex-col relative left-[220px] top-[-50px]'>
+                                    <img id='imgLike2' src="./imgs_gallery/heart.svg" alt="" width={24} onClick={() => CurtirFoto(2)} />
+                                    <p className='text-[13px] text-white'>10mil</p>
+                                </div>
+                            </span>
+                            <span className='w-[270px] h-[481px] flex-shrink-0'>
+                                <img src="./imgs_gallery/gato4.png" alt="" />
+                                <div className='w-[36px] h-[38px] flex justify-center items-center flex-col relative left-[220px] top-[-50px]'>
+                                    <img id='imgLike3' src="./imgs_gallery/heart.svg" alt="" width={24} onClick={() => CurtirFoto(3)} />
+                                    <p className='text-[13px] text-white'>10mil</p>
+                                </div>
+                            </span>
+                            <span className='w-[270px] h-[481px] flex-shrink-0'>
+                                <img src="./imgs_gallery/gato5.jpg" alt="" />
+                                <div className='w-[36px] h-[38px] flex justify-center items-center flex-col relative left-[220px] top-[-50px]'>
+                                    <img id='imgLike4' src="./imgs_gallery/heart.svg" alt="" width={24} onClick={() => CurtirFoto(4)} />
+                                    <p className='text-[13px] text-white'>10mil</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </section>
+
+                <section className='flex justify-center'>
+                    <aside className='w-[1240px] h-[387px] border-t-1 border-black text-[#373737] flex items-end '>
+                        <img src="./imgs_newsletter_subscription/image.png" alt="" width={505} style={{ marginTop: '40px' }} />
+                        <div className='flex flex-col h-[347px]' style={{ padding: '20px' }}>
+                            <h2 className='text-[50px]' style={{ fontFamily: 'SoraRegular', marginBottom: '50px', marginTop: '20px' }}>NEWSLETTER</h2>
+                            <div className='flex'>
+                                <div style={{ marginRight: '32px' }}>
+                                    <p className=' text-[14px] leading-[25px] w-[274px]' style={{ fontFamily: 'SoraBold' }}>CADASTRE-SE E GANHE 10% OFF NA SUA PRIMEIRA COMPRA</p>
+                                    <p className='text-[14px] leading-[25px] w-[295px]'>Seja a primeira a receber lançamentos, novidades e promoções.</p>
+                                </div>
+                                <div className='flex flex-col gap-y-10'>
+                                    <input type="text" name="" id="" placeholder='NOME DO SEU PET' className='border-b-1 w-[400px]' />
+                                    <input type="text" name="" id="" placeholder='SEU EMAIL' className='border-b-1 w-[400px]' />
+                                    <button className='w-[188px] h-[39px]'>CADASTRAR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
                 </section>
             </main>
-            <footer></footer>
+
+            <footer className='w-[1240px] h-[214px]' style={{ margin: 'auto', marginTop: '52px'}}>
+                <div className='flex text-[12px] text-[#373737]'>
+                    <div className='w-[210px] h-[189px] bg-[#373737] flex items-center justify-center'>
+                        <img src="./imgs_footer/logo.png" alt="" width={75} />
+                    </div>
+
+                    <div className='w-[1030px] h-[189px] border-1 border-[#373737] flex'>
+                        <div className='w-[525px] h-[100%] border-1 border-[#373737]'>
+                            <div className='w-[100%] h-[47px] border-b-1 border-[#373737] flex items-center justify-evenly leading-[25px]'>
+                                <p style={{ fontFamily: 'SoraBold' }}>PRODUTOS</p>
+                                <p style={{ fontFamily: 'SoraBold' }}>COLEÇÕES</p>
+                                <p style={{ fontFamily: 'SoraBold' }}>LOOKBOOK</p>
+                                <p style={{ fontFamily: 'SoraBold' }}>SOBRE</p>
+                                <p style={{ fontFamily: 'SoraBold' }}>WISHLIST</p>
+                                <p style={{ fontFamily: 'SoraBold' }}>BLOG</p>
+                            </div>
+
+                            <div className='w-[100%] h-[142px] flex'>
+                                <div style={{ paddingLeft: '16px' }} className='w-[210px] h-[100%] border-r-1 border-[#373737] flex flex-col items-start justify-center'>
+                                    <p className='w-[159px]' style={{ fontFamily: 'SoraBold', paddingBottom: '20px' }}>FORMAS DE PAGAMENTO</p>
+                                    <img src="./imgs_footer/formas_pagamentos.png" alt="" width={159.43} className='filter grayscale' />
+                                </div>
+
+                                <div className='w-[315px] h-[100%] flex flex-col justify-center items-start'>
+                                    <div style={{ paddingLeft: '16px'}}>
+                                        <p style={{ fontFamily: 'SoraBold', paddingLeft: '10px'}}>CERTIFICADOS E SEGURANÇA</p>
+                                        <img src="./imgs_footer/certificado.png" alt="" width={278} className='filter grayscale'/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='w-[210px] h-[100%] border-1 border-[#373737] text-[12px] flex flex-col items-center justify-center'>
+                            <p className='w-[143px] h-[9px]' style={{ fontFamily: 'SoraBold' }}>AJUDA</p>
+                            <p className='w-[143px] h-[134px] leading-[25px]' style={{ marginTop: '16px' }}>
+                                <ul>
+                                    <li>FAQ</li>
+                                    <li>Sobre nossos produtos</li>
+                                    <li>Trocas e devoluções</li>
+                                    <li>Entregas</li>
+                                    <li>Indique e ganhe</li>
+                                    Garantias
+                                </ul>
+                            </p>
+                        </div>
+
+                        <div className='w-[295px] h-[100%] border-1 border-[#373737]'>
+                            <div style={{ paddingLeft: '11px' }} className='w-[100%] h-[99px] border-b-1 border-[#373737] flex items-start justify-center flex-col'>
+                                <p style={{ fontFamily: 'SoraBold' }} className='w-[64px]'>CONTATO</p>
+                                <p className='w-[170px] h-[34px] leading-[25px]'>
+                                    WhatsApp - (51) 9999-9999 <br />
+                                    E-mail - ajuda@gat.com.br
+                                </p>
+                            </div>
+
+                            <div style={{ paddingLeft: '11px' }} className='w-[100%] h-[90px] flex items-start justify-center flex-col'>
+                                <p style={{ fontFamily: 'SoraBold', marginBottom: '18px' }}>REDES SOCIAIS</p>
+                                <img src="./imgs_footer/redes_sociais.png" alt="" width={137.75} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='flex justify-between'>
+                    <p className='text-[10px] leading-[25px]'>© 2024, GAT. TODOS OS DIREITOS RESERVADOS.</p>
+                    <p className='text-[10px] leading-[25px]'>GAT  LTDA. | R. Ondina Carvalheira Peixoto, 300 - Chácaras Palmeiras | Cataguases - MG | CEP 36774-550</p>
+                </div>
+            </footer>
         </div>
     );
 }
+
 
 export default Home;

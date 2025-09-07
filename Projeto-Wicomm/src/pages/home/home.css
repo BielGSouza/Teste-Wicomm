@@ -66,13 +66,6 @@ body {
     background-color: var(--light-grey);
 }
 
-p {
-    font-family: SoraLight;
-}
-
-h2 {
-    font-family: SoraBold;
-}
 
 
 
@@ -152,6 +145,7 @@ nav {
     font-size: 14px;
     color: white;
     animation: LetterScroll 12s linear infinite;
+    scrollbar-width: none;
 }
 
 @keyframes LetterScroll {
@@ -175,13 +169,38 @@ nav {
     transform: rotateZ(106.7deg);
 }
 
-button{
+button {
     border: 1px solid black;
     border-radius: 32px;
 }
 
-button:hover{
+button:hover {
     color: white;
     background-color: black;
     transition: 0.3s
+}
+
+/* Detalhes do slide ininito  */
+
+#SliderInfinito {
+    min-width: 100%;
+    animation: SliderCat 5s linear infinite;
+}
+
+#SliderInfinito:hover{
+    animation-play-state: paused;
+}
+
+@keyframes SliderCat {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-15%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
