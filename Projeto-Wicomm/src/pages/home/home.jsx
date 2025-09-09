@@ -1,5 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import Heart from '../../../public/imgs_gallery/heart.svg'
+import HeartRed from '../../../public/imgs_gallery/heart_red.svg'
 import './home.css'
 
 function Home() {
@@ -120,34 +122,34 @@ function Home() {
         const IdLike = numero
 
         if (numero === 0) {
-            if (like.src === "http://localhost:5173/imgs_gallery/heart.svg") {
-                like.src = "http://localhost:5173/imgs_gallery/heart_red.svg"
+            if (like.src === Heart) {
+                like.src = HeartRed
             } else {
-                like.src = "http://localhost:5173/imgs_gallery/heart.svg"
+                like.src = Heart
             }
         } else if (numero === 1) {
-            if (like1.src === "http://localhost:5173/imgs_gallery/heart.svg") {
-                like1.src = "http://localhost:5173/imgs_gallery/heart_red.svg"
+            if (like1.src === Heart) {
+                like1.src = HeartRed
             } else {
-                like1.src = "http://localhost:5173/imgs_gallery/heart.svg"
+                like1.src = Heart
             }
         } else if (numero === 2) {
-            if (like2.src === "http://localhost:5173/imgs_gallery/heart.svg") {
-                like2.src = "http://localhost:5173/imgs_gallery/heart_red.svg"
+            if (like2.src === Heart) {
+                like2.src = HeartRed
             } else {
-                like2.src = "http://localhost:5173/imgs_gallery/heart.svg"
+                like2.src = Heart
             }
         } else if (numero === 3) {
-            if (like3.src === "http://localhost:5173/imgs_gallery/heart.svg") {
-                like3.src = "http://localhost:5173/imgs_gallery/heart_red.svg"
+            if (like3.src === Heart) {
+                like3.src = HeartRed
             } else {
-                like3.src = "http://localhost:5173/imgs_gallery/heart.svg"
+                like3.src = Heart
             }
         } else if (numero === 4) {
-            if (like4.src === "http://localhost:5173/imgs_gallery/heart.svg") {
-                like4.src = "http://localhost:5173/imgs_gallery/heart_red.svg"
+            if (like4.src === Heart) {
+                like4.src = HeartRed
             } else {
-                like4.src = "http://localhost:5173/imgs_gallery/heart.svg"
+                like4.src = Heart
             }
         }
     }
@@ -496,35 +498,35 @@ function Home() {
                             <span className=' w-[270px] h-[481px] flex-shrink-0'>
                                 <img src="./imgs_gallery/gato1.png" alt="" />
                                 <div className='w-[36px] h-[38px] flex justify-center items-center flex-col relative left-[220px] top-[-50px]'>
-                                    <img id='imgLike' src="./imgs_gallery/heart.svg" alt="" width={24} onClick={() => CurtirFoto(0)} />
+                                    <img id='imgLike' src={Heart} alt="" width={24} onClick={() => CurtirFoto(0)} />
                                     <p className='text-[13px] text-white'>10mil</p>
                                 </div>
                             </span>
                             <span className='w-[270px] h-[481px] flex-shrink-0'>
                                 <img src="./imgs_gallery/gato2.png" alt="" />
                                 <div className='w-[36px] h-[38px] flex justify-center items-center flex-col relative left-[220px] top-[-50px]'>
-                                    <img id='imgLike1' src="./imgs_gallery/heart.svg" alt="" width={24} onClick={() => CurtirFoto(1)} />
+                                    <img id='imgLike1' src={Heart} className='cursor-pointer' alt="" width={24} onClick={() => CurtirFoto(1)} />
                                     <p className='text-[13px] text-white'>10mil</p>
                                 </div>
                             </span>
                             <span className='w-[270px] h-[481px] flex-shrink-0'>
                                 <img src="./imgs_gallery/gato3.png" alt="" />
                                 <div className='w-[36px] h-[38px] flex justify-center items-center flex-col relative left-[220px] top-[-50px]'>
-                                    <img id='imgLike2' src="./imgs_gallery/heart.svg" alt="" width={24} onClick={() => CurtirFoto(2)} />
+                                    <img id='imgLike2' src={Heart} className='cursor-pointer' alt="" width={24} onClick={() => CurtirFoto(2)} />
                                     <p className='text-[13px] text-white'>10mil</p>
                                 </div>
                             </span>
                             <span className='w-[270px] h-[481px] flex-shrink-0'>
                                 <img src="./imgs_gallery/gato4.png" alt="" />
                                 <div className='w-[36px] h-[38px] flex justify-center items-center flex-col relative left-[220px] top-[-50px]'>
-                                    <img id='imgLike3' src="./imgs_gallery/heart.svg" alt="" width={24} onClick={() => CurtirFoto(3)} />
+                                    <img id='imgLike3' src={Heart} className='cursor-pointer' alt="" width={24} onClick={() => CurtirFoto(3)} />
                                     <p className='text-[13px] text-white'>10mil</p>
                                 </div>
                             </span>
                             <span className='w-[270px] h-[481px] flex-shrink-0'>
                                 <img src="./imgs_gallery/gato5.jpg" alt="" />
                                 <div className='w-[36px] h-[38px] flex justify-center items-center flex-col relative left-[220px] top-[-50px]'>
-                                    <img id='imgLike4' src="./imgs_gallery/heart.svg" alt="" width={24} onClick={() => CurtirFoto(4)} />
+                                    <img id='imgLike4' src={Heart} className='cursor-pointer' alt="" width={24} onClick={() => CurtirFoto(4)} />
                                     <p className='text-[13px] text-white'>10mil</p>
                                 </div>
                             </span>
